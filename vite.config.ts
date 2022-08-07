@@ -12,14 +12,17 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, "lib/main.js"),
+      entry: resolve(__dirname, "src/lib/index.ts"),
       name: "bomm-ui",
+      formats: ["es", "umd"],
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "react-dom", "styled-components"],
       output: {
         globals: {
           react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
         },
       },
     },

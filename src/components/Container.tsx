@@ -10,7 +10,8 @@ const StyledDiv = styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 ${(props) => props.theme.spacing.unit * 4}px;
+  padding-left: ${(props) => props.theme.spacing.unit * 4}px;
+  padding-right: ${(props) => props.theme.spacing.unit * 4}px;
 `;
 
 const Container: React.FC<IContainerProps> = ({

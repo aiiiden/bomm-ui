@@ -1,8 +1,22 @@
 {
   "name": "bomm-ui",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "hjjam100",
+    "email": "hjjam100@gmail.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/bomm-ui.umd.cjs",
+  "module": "./dist/bomm-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bomm-ui.js",
+      "require": "./dist/bomm-ui.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
